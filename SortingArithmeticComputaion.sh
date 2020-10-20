@@ -13,5 +13,16 @@ expession_3=$(( c+a/b ))
 expession_4=$(( a%b+c ))
 
 
+declare -A result_dict
+
+result_dict['expession_1']=$expession_1
+
+result_dict['expession_2']=$expession_2
+
+result_dict['expession_3']=$expession_3
+
+result_dict['expession_4']=$expession_4
+
+
 
 
