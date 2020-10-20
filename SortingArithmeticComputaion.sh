@@ -52,3 +52,7 @@ done
 
 sort '-lt'
 echo ${result_array[@]}
+
+sort '-gt'
+echo ${result_array[@]}
+
