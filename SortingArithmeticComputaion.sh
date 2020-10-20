@@ -1,4 +1,4 @@
-#! /bin/bash -x
+#! /bin/bash 
 
 echo "Welcome to Sorting Arithmetic Computation Program"
 
@@ -32,3 +32,23 @@ do
 done
 
 
+sort(){
+condition=$1
+array_length=${#result_array[@]}
+
+for (( i=0; i<$array_length; i++ ))
+do
+   for (( j=0; j<$(( array_length - i -1 )); j++ ))
+   do
+      if [ ${result_array[$j]} $condition ${result_array[$(( j +1))]} ]
+      then
+          temp=${result_array[$j]}
+          result_array[$j]=${result_array[$(( j +1 ))]}
+          result_array[$(( j+1 ))]=$temp
+      fi
+   done
+done
+}
+
+sort '-lt'
+echo ${result_array[@]}
